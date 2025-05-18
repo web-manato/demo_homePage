@@ -1,0 +1,134 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// レイアウト
+.ly_header{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+
+// ブロックモジュール
+.bl_header{
+    background: g.$bg-white;
+}
+.bl_header_group{
+    width: 95%;
+    margin: 0 0 0 auto;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@include mixin.mq("pc"){
+    .bl_header_group{
+        padding: 17.5px 0;
+    }
+}
+@include mixin.mq("big"){
+    .bl_header_inner{
+        max-width: 1342px;
+        margin: 0 auto;
+    }
+    .bl_header_group{
+        width: 100%;
+    }
+}
+
+// ヘッダーロゴ
+.bl_header_logo{
+    img{
+        width: 100%;
+    }
+}
+
+// ボタン
+.bl_header_btn{
+    display: inline-block;
+    font-family: g.$font-family-en;
+    background: g.$bg-primary;
+    border: 1px solid g.$bg-primary;
+    color: g.$font-color-white;
+    padding: 14px 21.5px;
+    letter-spacing: 0.08em;
+    line-height: 100%;
+    transition: all 0.3s;
+}
+.bl_header_btn:hover{
+    background: g.$bg-white;
+    color: g.$font-color-primary;
+}
+
+// ナビゲーションメニュー
+// スマホ
+.bl_sp_header_nav{
+    background: g.$bg-primary;
+    padding: 14px 0;
+}
+.bl_sp_header_nav_list{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 560px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+.bl_sp_header_nav_list::-webkit-scrollbar{
+    display: none;
+}
+.bl_sp_header_nav_listItem{
+    color: g.$font-color-white;
+    font-family: g.$font-family-en;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+}
+.bl_sp_header_nav_list_line{
+    width: 1px;
+    height: 15px;
+    background: g.$border-white;
+    flex-shrink: 0;
+}
+
+// パソコン
+.bl_pc_header_right{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.bl_pc_header_nav_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+.bl_pc_header_nav_listItem{
+    color: g.$font-color-primary;
+    font-size: 14px;
+    font-family: g.$font-family-en;
+    transition: all 0.3s;
+}
+.bl_pc_header_nav_listItem:hover{
+    opacity: 0.7;
+}
+
+// パソコン非表示
+.bl_pc_header_nav{
+    display: none;
+}
+// ナビゲーション
+@include mixin.mq("pc"){
+    // スマホ非表示
+    .bl_sp_header_nav{
+        display: none;
+    }
+    // パソコン表示
+    .bl_pc_header_nav{
+        display: block;
+    }
+}

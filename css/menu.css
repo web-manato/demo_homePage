@@ -1,0 +1,10 @@
+.bl_pageKv__concept {
+  background-image: url(../img/sp_pageKv_bgImg_menu-2000px.png);
+}
+
+@media screen and (min-width: 1080px) {
+  .bl_pageKv__concept {
+    background-image: url(../img/pc_pageKv_bgImg_menu-3500px.png);
+  }
+}
+/*# sourceMappingURL=menu.css.map */

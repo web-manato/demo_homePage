@@ -1,0 +1,174 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// レイアウト
+// キービジュアル
+.ly_kv{
+    width: 100%;
+    height: 500px;
+}
+@include mixin.mq("pc"){
+    .ly_kv{
+        height: 685px;
+    }
+}
+
+
+// ブロックモジュール
+// キービジュアル
+.bl_kv{
+    background-image: url(../img/sp_top_kv_bgImg-2000px.png);
+    background-size: cover;
+    background-position: center center;
+}
+@include mixin.mq("pc"){
+    .bl_kv{
+        background-image: url(../img/pc_top_kv_bgImg-3500px.png);
+    }
+}
+
+// コンセプト
+.bl_top_concept{
+    margin-top: 40px;
+}
+.bl_top_concept_imgWrapper{
+    img{
+        width: 100%;
+    }
+}
+.bl_top_concept_body{
+    margin-top: 40px;
+    text-align: center;
+}
+.bl_top_concept_ttl{
+    font-size: 16px;
+    line-height: 175%;
+    text-align: center;
+}
+.bl_top_concept_txt{
+    margin-top: 24px;
+}
+@include mixin.mq("pc"){
+    .bl_top_concept{
+        margin-top: 48px;
+    }
+    .bl_top_concept_body{
+        margin-top: 48px;
+    }
+    .bl_top_concept_ttl{
+        font-size: 20px;
+    }
+    .bl_top_concept_txt{
+        margin-top: 32px;
+    }
+}
+
+
+// メニュー
+.bl_top_menu{
+    margin-top: 40px;
+}
+.bl_top_menu_separate{
+    width: 100%;
+}
+@include mixin.mq("pc"){
+    .bl_top_menu{
+        margin-top: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 62px;
+    }
+}
+// リストタイトル
+.bl_top_menu_ttl{
+    font-size: 18px;
+    font-family: g.$font-family-en;
+    color: g.$font-color-white;
+}
+@include mixin.mq("pc"){
+    .bl_top_menu_ttl{
+        font-size: 20px;
+    }
+}
+// メニューリスト
+.bl_top_menu_list{
+    width: 100%;
+    color: g.$font-color-white;
+    margin-top: 16px;
+}
+.bl_top_menu_listItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bl_top_menu_listItem_price{
+    font-family: g.$font-family-en;
+}
+.bl_top_menu_list_line{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: g.$border-white;
+}
+.bl_top_menu_listItem + .bl_top_menu_list_line{
+    margin-top: 10px;
+}
+.bl_top_menu_list_line + .bl_top_menu_listItem{
+    margin-top: 10px;
+}
+.bl_top_menu_separate + .bl_top_menu_separate{
+    margin-top: 40px;
+}
+@include mixin.mq("pc"){
+    .bl_top_menu_separate + .bl_top_menu_separate{
+        margin-top: 0px;
+    }
+}
+
+
+// ショップリスト
+.bl_top_shopList{
+    margin-top: 40px;
+}
+// テキスト
+.bl_top_shopList_txt{
+    text-align: center;
+}
+// 店名リスト
+.bl_top_shopList_list{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 14px 16px;
+}
+.bl_top_shopList_listItem{
+    line-height: 100%;
+    text-align: center;
+    padding: 15.5px 0;
+    background: g.$bg-grey;
+    border-radius: 22.5px;
+}
+@include mixin.mq("tab"){
+    .bl_top_shopList_list{
+        grid-template-columns: repeat(3,1fr);
+        gap: 24px;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_top_shopList{
+        margin-top: 48px;
+    }
+    .bl_top_shopList_list{
+        margin-top: 48px;
+    }
+    .bl_top_shopList_listItem{
+        line-height: 100%;
+        text-align: center;
+        padding: 15.5px 0;
+        background: g.$bg-grey;
+        border-radius: 22.5px;
+    }
+}
+
+

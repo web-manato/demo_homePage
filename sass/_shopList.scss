@@ -1,0 +1,87 @@
+@use "_mixin";
+@use "_variable" as g;
+
+
+// ブロックモジュール
+// キービジュアル
+// 背景画像
+.bl_pageKv__blogNews{
+    background-image: url(../img/sp_pageKv_bgImg_shopList-2000px.png);
+}
+@include mixin.mq("pc"){
+    .bl_pageKv__blogNews{
+        background-image: url(../img/pc_pageKv_bgImg_shopList-3500px.png);
+    }
+}
+
+// 店名リスト
+.bl_shopList_list{
+    line-height: 155%;
+    display: grid;
+    gap: 40px;
+}
+@include mixin.mq("tab"){
+    .bl_shopList_list{
+        grid-template-columns: repeat(2,1fr);
+        gap: 32px 60px;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_shopList_list{
+        gap: 48px 99px;
+    }
+}
+// 店の外観
+.bl_shopList_listItem_imgWrapper{
+    img{
+        width: 100%;
+    }
+}
+// ボディ
+.bl_shopList_listItem_txtGroup{
+    margin-top: 16px;
+    white-space: nowrap;
+
+    address{
+        margin-top: 4px;
+    }
+}
+// 店名
+.bl_shopList_listItem_ttl{
+    font-size: 16px;
+}
+// アドレス類
+.bl_shopList_listItem_address{
+    font-size: 12px;
+}
+.bl_shopList_listItem_tel{
+    margin-top: 4px;
+    font-size: 18px;
+    font-family: g.$font-family-en;
+}
+// 店舗情報
+.bl_shopList_listItem_list{
+    margin-top: 4px;
+}
+.bl_shopList_listItem_listItem{
+    font-size: 12px;
+}
+.bl_shopList_listItem_listItem + .bl_shopList_listItem_listItem{
+    margin-top: 4px;
+}
+@include mixin.mq("pc"){
+    .bl_shopList_listItem{
+        figure{
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            align-items: center;
+        }
+    }
+    .bl_shopList_listItem_imgWrapper{
+        width: 60%;
+    }
+    .bl_shopList_listItem_txtGroup{
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,20 @@
+@use "_mixin";
+@use "_variable" as g;
+
+
+// ブロックモジュール
+// キービジュアル
+// 背景画像
+.bl_pageKv__404{
+    background-image: url(../img/sp_pageKv_bgImg_404-2000px.png);
+}
+@include mixin.mq("pc"){
+    .bl_pageKv__404{
+        background-image: url(../img/pc_pageKv_bgImg_404-3500px.png);
+    }
+}
+
+// メッセージ
+.bl_404_txt{
+    text-align: center;
+}

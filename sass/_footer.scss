@@ -1,0 +1,82 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// レイアウト
+.ly_footer{
+    width: 100%;
+    padding: 64px 0 16px;
+}
+@include mixin.mq("pc"){
+    .ly_footer{
+        padding: 80px 0 24px;
+    }
+}
+
+
+// ブロックモジュール
+.bl_footer{
+    background: g.$bg-primary;
+}
+.bl_footer_inner{
+    width: 90%;
+    margin: 0 auto;
+}
+
+// フッターロゴ
+.bl_footer_logo{
+    display: block;
+    text-align: center;
+}
+
+// フッターナビゲーション
+.bl_footer_nav{
+    margin-top: 24px;
+}
+.bl_footer_nav_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px 12px;
+    flex-wrap: wrap;
+}
+.bl_footer_nav_listItem{
+    color: g.$font-color-white;
+}
+.bl_footer_nav_list_line{
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background: g.$border-white;
+    transform: translateY(2px) rotate(15deg);
+}
+@include mixin.mq("pc"){
+    .bl_footer_nav{
+        margin-top: 40px;
+    }
+    .bl_footer_nav_list{
+        gap: 3px 18px;
+    }
+    .bl_footer_nav_list_line{
+        height: 18px;
+    }
+}
+
+// インフォメーション
+.bl_footer_information_group{
+    margin-top: 24px;
+    text-align: center;
+    color: g.$font-color-white;
+    line-height: 100%;
+}
+.bl_footer_information_address{
+    margin-top: 8px;
+}
+
+// コピーライト
+.bl_footer_copyRight_wrapper{
+    margin-top: 64px;
+    text-align: center;
+}
+.bl_footer_copyRight{
+    color: g.$font-color-white;
+}

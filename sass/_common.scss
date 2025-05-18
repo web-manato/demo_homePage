@@ -1,0 +1,320 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// ベーススタイル
+body{
+    font-size: 14px;
+    font-family: g.$font-family-jp;
+    color: g.$font-color-base;
+    line-height: 200%;
+}
+span{
+    display: block;
+}
+picture{
+    display: block;
+}
+img{
+    vertical-align: middle;
+}
+// PC
+@include mixin.mq("pc"){
+    body{
+        font-size: 16px;
+    }
+}
+
+// ブロックモジュール
+// コンテンツ幅
+.bl_cont_inner{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+// PC
+@include mixin.mq("pc"){
+    .bl_cont_inner{
+        width: 80%;
+    }
+    .bl_cont_inner__70{
+        width: 70%;
+    }
+}
+// 画像
+.bl_imgWrapper img{
+    width: 100%;
+}
+
+// ユニークモジュール
+.un_lb__reverse{
+    display: none;
+}
+@include mixin.mq("pc"){
+    .un_lb{
+        display: none;
+    }
+    .un_lb__reverse{
+        display: block;
+    }
+}
+
+
+// レイアウト
+.ly_cont{
+    padding: 64px 0;
+}
+.ly_cont{
+    padding: 80px 0;
+}
+// セクションタイトル
+.ly_secTtl{
+    text-align: center;
+}
+// ボタン
+.ly_btn{
+    margin-top: 40px;
+    text-align: center;
+}
+@include mixin.mq("pc"){
+    .ly_btn{
+        margin-top: 48px;
+    }
+}
+// 各ページKV
+.ly_pageKv{
+    width: 100%;
+    height: 180px;
+}
+@include mixin.mq("pc"){
+    .ly_pageKv{
+        height: 460px;
+    }
+}
+
+
+// ブロックモジュール
+// 背景色
+.bl_contBg_secondary{
+    background: g.$bg-secondary;
+}
+// 背景画像
+.bl_contBg_menuImg{
+    background: url(../img/sp_top_menu_bgImg-2000px.png);
+    background-size: cover;
+    background-position: center center;
+}
+@include mixin.mq("pc"){
+    .bl_contBg_menuImg{
+        background: url(../img/pc_top_menu_bgImg-3000px.png);
+    }
+}
+
+// 各ページKV
+// 背景画像
+.bl_pageKv{
+    background-size: cover;
+    background-position: center center;
+    padding: 77px 18px;
+}
+@include mixin.mq("pc"){
+    .bl_pageKv{
+        padding: 212px 143px;
+    }
+}
+// ページタイトル
+.bl_pageKv_ttl{
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 0.08em;
+    font-family: g.$font-family-en;
+    color: g.$font-color-white;
+}
+@include mixin.mq("pc"){
+    .bl_pageKv_ttl{
+        font-size: 36px;
+    }
+}
+
+
+// セクションチェンジ
+.bl_secChange{
+    display: block;
+
+    img{
+        width: 100%;
+    }
+}
+
+// 投稿リスト
+.bl_post{
+    margin-top: 40px;
+    display: grid;
+    gap: 40px;
+}
+// カード
+.bl_post_card{
+    transition: 0.3s;
+}
+.bl_post_card:hover{
+    opacity: 0.7;
+}
+// サムネイル
+.bl_post_card_thumbnail{
+    img{
+        width: 100%;
+    }
+}
+// ボディ
+.bl_post_card_body{
+    margin-top: 16px;
+    line-height: 100%;
+}
+.bl_post_card_date{
+    font-size: 12px;
+    color: g.$font-color-primary;
+    font-family: g.$font-family-en;
+}
+.bl_post_card_ttl{
+    line-height: 155%;
+    margin-top: 8px;
+    font-size: 18px;
+}
+@include mixin.mq("tab"){
+    .bl_post{
+        grid-template-columns: repeat(3,1fr);
+        gap: 48px 30px;
+    }
+    .bl_post_card_body{
+        margin-top: 20px;
+    }
+    .bl_post_card_date{
+        font-size: 14px;
+    }
+    .bl_post_card_ttl{
+        font-size: 22px;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_post{
+        margin-top: 48px;
+    }
+}
+
+// インスタグラムセクション
+.bl_instagram{
+    width: 100%;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+}
+.bl_instagram_post{
+    img{
+        width: 100%;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_instagram{
+        margin-top: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+    }
+}
+
+
+// エレメントモジュール
+// スペーサー
+.el_spacer{
+    width: 100%;
+    height: 119px;
+}
+@include mixin.mq("pc"){
+    .el_spacer{
+        height: 81px;
+    }
+}
+
+// セクションタイトル
+.el_secTtl{
+    font-size: 24px;
+    font-family: g.$font-family-en;
+    letter-spacing: 0.08em;
+}
+.el_secTtl__white{
+    color: g.$font-color-white;
+}
+@include mixin.mq("pc"){
+    .el_secTtl{
+        font-size: 32px;
+    }
+}
+
+// ボタン
+.el_btn{
+    display: inline-block;
+    width: 220px;
+    background: g.$bg-black;
+    border: 1px solid g.$bg-black;
+    color: g.$font-color-white;
+    padding: 18px 67px;
+    line-height: 100%;
+    font-weight: 300;
+    font-family: g.$font-family-en;
+    position: relative;
+    transition: all 0.3s;
+}
+.el_btn::after{
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: g.$border-white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transition: 0.3s;
+}
+.el_btn__white{
+    background: g.$bg-white;
+    color: g.$font-color-base;
+    border: 1px solid g.$border-white;
+    transition: all 0.3s;
+}
+.el_btn__white::after{
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: g.$border-black;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transition: 0.3s;
+}
+.el_btn:hover{
+    background: g.$bg-white;
+    color: g.$font-color-base;
+}
+.el_btn:hover::after{
+    width: 32px;
+    background: g.$border-black;
+}
+.el_btn:hover{
+    background: g.$bg-black;
+    color: g.$font-color-white;
+}
+.el_btn__white:hover::after{
+    width: 32px;
+    background: g.$border-white;
+}
+@include mixin.mq("pc"){
+    .el_btn{
+        width: 240px;
+        padding: 21px 64.5px;
+        font-size: 18px;
+    }
+    .el_btn::after{
+        width: 28px;
+    }
+}

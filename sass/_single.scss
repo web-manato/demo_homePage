@@ -1,0 +1,67 @@
+@use "_mixin";
+@use "_variable" as g;
+
+
+// ブロックモジュール
+// キービジュアル
+// 背景画像
+// todo 画像
+.bl_pageKv__shopList{
+    background-image: url(../img/sp_pageKv_bgImg_blogNews-2000px.png);
+}
+@include mixin.mq("pc"){
+    .bl_pageKv__shopList{
+        background-image: url(../img/pc_pageKv_bgImg_blogNews-3500px.png);
+    }
+}
+
+// サムネイル
+.bl_post_imgWrapper{
+    img{
+        width: 100%;
+    }
+}
+// 記事情報
+.bl_post_information_txtGroup{
+    margin-top: 16px;
+    line-height: 100%;
+}
+.bl_post_information_date{
+    font-size: 12px;
+    color: g.$font-color-primary;
+    font-family: g.$font-family-en;
+}
+.bl_post_information_ttl{
+    line-height: 155%;
+    margin-top: 8px;
+    font-size: 18px;
+}
+@include mixin.mq("pc"){
+    .bl_post_information_txtGroup{
+        margin-top: 24px;
+    }
+    .bl_post_information_date{
+        font-size: 14px;
+    }
+    .bl_post_information_ttl{
+        font-size: 26px;
+    }
+}
+
+// 記事本文
+.bl_post_txtGroup{
+    margin-top: 40px;
+
+    p + p{
+        margin-top: 32px;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_post_txtGroup{
+        margin-top: 48px;
+
+        p + p{
+            margin-top: 40px;
+        }
+    }
+}

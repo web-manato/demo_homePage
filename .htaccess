@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{REQUEST_URI} (?i)(.*)(\.jpe?g|\.png)$
+RewriteCond %{DOCUMENT_ROOT}%1%2.webp -f
+RewriteRule (?i)(.*)(\.jpe?g|\.png)$ %1$2\.webp [L,T=image/webp,R]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header append Vary Accept env=REDIRECT_accept
+</IfModule>
+
+<IfModule mod_mime.c>
+AddType image/webp .webp
+</IfModule>
+
+AddHandler fcgid-script .htm .html
+
+# 404エラーハンドリング - 存在しないページへのアクセス時に404.htmlへリダイレクト
+ErrorDocument 404 "http://localhost/demo_homePage/404.html"
+
+# 404リダイレクトの強化 - 存在しないファイルへのアクセスを捕捉
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /404.html [L,R=404]
+</IfModule>

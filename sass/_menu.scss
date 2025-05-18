@@ -1,0 +1,98 @@
+@use "_mixin";
+@use "_variable" as g;
+
+
+// ブロックモジュール
+// キービジュアル
+// 背景画像
+.bl_pageKv__menu{
+    background-image: url(../img/sp_pageKv_bgImg_menu-2000px.png);
+}
+@include mixin.mq("pc"){
+    .bl_pageKv__menu{
+        background-image: url(../img/pc_pageKv_bgImg_menu-3500px.png);
+    }
+}
+
+// テキスト
+.bl_menu_txtGroup{
+    text-align: center;
+}
+.bl_menu_ttl{
+    font-size: 16px;
+    line-height: 175%;
+}
+.bl_menu_txt{
+    margin-top: 24px;
+}
+@include mixin.mq("pc"){
+    .bl_menu_ttl{
+        font-size: 20px;
+    }
+}
+// メニューリスト
+.bl_menu_list{
+    margin-top: 40px;
+}
+@include mixin.mq("pc"){
+    .bl_menu_list{
+        margin-top: 48px;
+    }
+}
+// リストアイテム
+// 画像
+.bl_menu_listItem_imgWrapper{
+    img{
+        width: 100%;
+    }
+}
+// ボディ
+.bl_menu_listItem_txtGroup{
+    margin-top: 18px;
+}
+.bl_menu_listItem_ttl{
+    font-size: 16px;
+    line-height: 100%;
+}
+.bl_menu_listItem_price{
+    margin-top: 12px;
+    line-height: 100%;
+}
+.bl_menu_listItem_txt{
+    margin-top: 12px;
+}
+.bl_menu_list{
+    li + li{
+        margin-top: 40px;
+    }
+}
+@include mixin.mq("tab"){
+    .bl_menu_listItem{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 48px;
+    }
+    .bl_menu_listItem_imgWrapper{
+        width: 70%;
+    }
+    .bl_menu_listItem_txtGroup{
+        margin-top: 0;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_menu_listItem_ttl{
+        font-size: 20px;
+    }
+    .bl_menu_listItem_price{
+        margin-top: 16px;
+    }
+    .bl_menu_listItem_txt{
+        margin-top: 24px;
+    }
+    .bl_menu_list{
+        li + li{
+            margin-top: 48px;
+        }
+    }
+}

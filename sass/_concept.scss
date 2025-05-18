@@ -1,0 +1,54 @@
+@use "_mixin";
+@use "_variable" as g;
+
+
+// ブロックモジュール
+// キービジュアル
+// 背景画像
+.bl_pageKv__concept{
+    background-image: url(../img/sp_pageKv_bgImg_concept-2000px.png);
+}
+@include mixin.mq("pc"){
+    .bl_pageKv__concept{
+        background-image: url(../img/pc_pageKv_bgImg_concept-3500px.png);
+    }
+}
+
+// 画像
+.bl_concept_imgWrapper{
+    img{
+        width: 100%;
+    }
+}
+.bl_concept_imgWrapper:nth-of-type(2){
+    margin-top: 40px;
+}
+@include mixin.mq("pc"){
+    .bl_concept_imgWrapper:nth-of-type(2){
+        margin-top: 48px;
+    }
+}
+// ボディ
+.bl_concept_body{
+    margin-top: 40px;
+}
+.bl_concept_copy{
+    font-size: 16px;
+    line-height: 175%;
+    text-align: center;
+}
+.bl_concept_txt{
+    margin-top: 24px;
+    text-align: center;
+}
+@include mixin.mq("pc"){
+    .bl_concept_body{
+        margin-top: 48px;
+    }
+    .bl_concept_copy{
+        font-size: 20px;
+    }
+    .bl_concept_txt{
+        margin-top: 32px;
+    }
+}

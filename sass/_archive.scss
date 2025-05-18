@@ -1,0 +1,54 @@
+@use "_mixin";
+@use "_variable" as g;
+
+
+// ブロックモジュール
+// キービジュアル
+// 背景画像
+// todo 画像
+.bl_pageKv__blogNews{
+    background-image: url(../img/sp_pageKv_bgImg_blogNews-2000px.png);
+}
+@include mixin.mq("pc"){
+    .bl_pageKv__blogNews{
+        background-image: url(../img/pc_pageKv_bgImg_blogNews-3500px.png);
+    }
+}
+
+// ページネーション
+.bl_pagiNation_wrapper{
+    margin-top: 40px;
+}
+.bl_pagiNation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.bl_pagiNation_item{
+    width: 32px;
+    height: 32px;
+    border: 1px solid g.$border-black;
+    text-align: center;
+    line-height: 32px;
+    font-family: g.$font-family-en;
+    cursor: pointer;
+}
+.bl_pagiNation_item__notBg{
+    border: none;
+    cursor: auto;
+}
+.bl_pagiNation_item__current{
+    background: g.$bg-black;
+    color: g.$font-color-white;
+}
+@include mixin.mq("pc"){
+    .bl_pagiNation_wrapper{
+        margin-top: 48px;
+    }
+    .bl_pagiNation_item{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="http://www.google.com/s2/favicons?domain=ファビコンを取得したいサイトURL">
+    <link rel="apple-touch-icon-precomposed" href="画像のURL" />
+    <meta name="msapplication-TileImage" content="画像のURL" />
+    <meta name="msapplication-TileColor" content="カラーコード（例：#F89174）"/>
+    <title>ホームページデモ</title>
+    <meta name="description" content="まなとが制作したホームページデモです。">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- js -->
+    <script src="js/main.js" type="module"></script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+</head>
+<body>
+    <header class="ly_header bl_header">
+        <div class="bl_header_inner">
+            <div class="bl_header_group">
+                <!-- ヘッダーロゴ -->
+                <h1 class="bl_header_logo">
+                    <picture>
+                        <source media="(max-width: 1080px)" srcset="img/sp_header_logo.svg">
+                        <img src="img/pc_header_logo.svg" alt="SUPPLE">
+                    </picture>
+                </h1>
+                <!-- 右側 -->
+                <div class="bl_pc_header_right">
+                    <!-- pcナビゲーション -->
+                    <nav class="bl_pc_header_nav">
+                        <ul class="bl_pc_header_nav_list">
+                            <li class="bl_pc_header_nav_listItem">
+                                <a href="concept.html">CONCEPT</a>
+                            </li>
+                            <li class="bl_pc_header_nav_listItem">
+                                <a href="menu.html">MENU</a>
+                            </li>
+                            <li class="bl_pc_header_nav_listItem">
+                                <a href="shoplist.html">SHOPLIST</a>
+                            </li>
+                            <li class="bl_pc_header_nav_listItem">
+                                <a href="archive.html">BLOG&amp;NEWS</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- ヘッダーボタン -->
+                    <a href="#" class="bl_header_btn">ONLINE&nbsp;SHOP</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- spナビゲーション -->
+        <nav class="bl_sp_header_nav">
+            <ul class="bl_sp_header_nav_list">
+                <li class="bl_sp_header_nav_listItem">
+                    <a href="concept.html">CONCEPT</a>
+                </li>
+                <li class="bl_sp_header_nav_list_line"></li>
+                <li class="bl_sp_header_nav_listItem">
+                    <a href="menu.html">MENU</a>
+                </li>
+                <li class="bl_sp_header_nav_list_line"></li>
+                <li class="bl_sp_header_nav_listItem">
+                    <a href="shoplist.html">SHOPLIST</a>
+                </li>
+                <li class="bl_sp_header_nav_list_line"></li>
+                <li class="bl_sp_header_nav_listItem">
+                    <a href="archive.html">BLOG&amp;NEWS</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- スペーサー -->
+        <div class="el_spacer" aria-hidden="true"></div>
+        <!-- キービジュアル -->
+        <section class="ly_pageKv bl_pageKv bl_pageKv__blogNews">
+            <h2 class="bl_pageKv_ttl">BLOG&amp;NEWS</h2>
+        </section>
+
+        <!-- 記事 -->
+        <article class="ly_cont">
+            <div class="bl_cont_inner bl_cont_inner__70">
+
+                <!-- サムネイル -->
+                <picture class="bl_post_imgWrapper js-fadeIn">
+                    <source media="(max-width: 400px)" srcset="img/sp_post_thumbnail-1000px.png">
+                    <source media="(max-width: 500px)" srcset="img/sp_post_thumbnail-1500px.png">
+                    <source media="(max-width: 768px)" srcset="img/sp_post_thumbnail-2000px.png">
+                    <source media="(max-width: 1080px)" srcset="img/pc_post_thumbnail-2500px.png">
+                    <source media="(max-width: 2000px)" srcset="img/pc_post_thumbnail-3000px.png">
+                    <img src="img/pc_post_thumbnail-3500px.png" alt="講習会を開催しました">
+                </picture>
+                <!-- 記事情報 -->
+                <div class="bl_post_information_txtGroup">
+                    <time datetime="2025-05-18" class="bl_post_information_date">2025/05/18</time>
+                    <h1 class="bl_post_information_ttl">講習会を開催しました。</h1>
+                </div>
+
+                <!-- 記事本文 -->
+                <div class="bl_post_txtGroup">
+                    <p class="js-fadeIn">
+                        親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。
+                        なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
+                        新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                        弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、
+                        この次は抜かさずに飛んで見せますと答えた。（青空文庫より）
+                    </p>
+                    <p class="js-fadeIn">
+                        親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。
+                        なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
+                        新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                        弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、
+                        この次は抜かさずに飛んで見せますと答えた。（青空文庫より）
+                    </p>
+                    <p class="js-fadeIn">
+                        親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。
+                        なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
+                        新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                        弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、
+                        この次は抜かさずに飛んで見せますと答えた。（青空文庫より）
+                    </p>
+                    <p class="js-fadeIn">
+                        親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。
+                        なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
+                        新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                        弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、
+                        この次は抜かさずに飛んで見せますと答えた。（青空文庫より）
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- インスタグラム -->
+        <section class="ly_cont bl_contBg_secondary">
+
+            <!-- セクションタイトル -->
+            <div class="ly_secTtl">
+                <h2 class="el_secTtl">INSTAGRAM</h2>
+            </div>
+
+            <!-- コンテンツ -->
+            <div class="bl_instagram">
+                <picture class="bl_instagram_post">
+                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img-1000px.png">
+                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img-1500px.png">
+                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img-2000px.png">
+                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img-2500px.png">
+                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img-3000px.png">
+                    <img src="img/pc_instagram_img-3500px.png" alt="投稿1">
+                </picture>
+                <picture class="bl_instagram_post">
+                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img2-1000px.png">
+                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img2-1500px.png">
+                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img2-2000px.png">
+                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img2-2500px.png">
+                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img2-3000px.png">
+                    <img src="img/pc_instagram_img2-3500px.png" alt="投稿2">
+                </picture>
+                <picture class="bl_instagram_post">
+                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img3-1000px.png">
+                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img3-1500px.png">
+                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img3-2000px.png">
+                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img3-2500px.png">
+                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img3-3000px.png">
+                    <img src="img/pc_instagram_img3-3500px.png" alt="投稿3">
+                </picture>
+                <picture class="bl_instagram_post">
+                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img4-1000px.png">
+                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img4-1500px.png">
+                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img4-2000px.png">
+                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img4-2500px.png">
+                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img4-3000px.png">
+                    <img src="img/pc_instagram_img4-3500px.png" alt="投稿4">
+                </picture>
+                <picture class="bl_instagram_post">
+                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img5-1000px.png">
+                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img5-1500px.png">
+                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img5-2000px.png">
+                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img5-2500px.png">
+                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img5-3000px.png">
+                    <img src="img/pc_instagram_img5-3500px.png" alt="投稿5">
+                </picture>
+                <picture class="bl_instagram_post">
+                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img6-1000px.png">
+                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img6-1500px.png">
+                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img6-2000px.png">
+                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img6-2500px.png">
+                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img6-3000px.png">
+                    <img src="img/pc_instagram_img6-3500px.png" alt="投稿6">
+                </picture>
+            </div>
+
+            <!-- ボタン -->
+            <div class="ly_btn">
+                <a href="#" class="el_btn">INSTAGRAM</a>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="ly_footer bl_footer">
+        <div class="bl_footer_inner">
+
+            <!-- フッターロゴ -->
+            <picture class="bl_footer_logo">
+                <source media="(max-width: 1080px)" srcset="img/sp_footer_logo.svg">
+                <img src="img/pc_footer_logo.svg" alt="SUPPLE">
+            </picture>
+
+            <!-- フッターナビゲーション -->
+            <nav class="bl_footer_nav">
+                <ul class="bl_footer_nav_list">
+                    <li class="bl_footer_nav_listItem">
+                        <a href="#">北千住店</a>
+                    </li>
+                    <li class="bl_footer_nav_list_line"></li>
+                    <li class="bl_footer_nav_listItem">
+                        <a href="#">代官山店</a>
+                    </li>
+                    <li class="bl_footer_nav_list_line"></li>
+                    <li class="bl_footer_nav_listItem">
+                        <a href="#">新宿店</a>
+                    </li>
+                    <li class="bl_footer_nav_list_line"></li>
+                    <li class="bl_footer_nav_listItem">
+                        <a href="#">八王子店</a>
+                    </li>
+                    <li class="bl_footer_nav_list_line"></li>
+                    <li class="bl_footer_nav_listItem">
+                        <a href="#">銀座店</a>
+                    </li>
+                    <li class="bl_footer_nav_list_line"></li>
+                    <li class="bl_footer_nav_listItem">
+                        <a href="#">渋谷店</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 運営元情報 -->
+            <div class="bl_footer_information_group">
+                <p class="bl_footer_information_company">株式会社&nbsp;SUPPLE</p>
+                <address class="bl_footer_information_address">
+                    〒123-4567&nbsp;東京都渋谷区ABC
+                </address>
+            </div>
+
+            <!-- コピーライト -->
+            <div class="bl_footer_copyRight_wrapper">
+                <small class="bl_footer_copyRight">&copy;2025&nbsp;SUPPLE</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
