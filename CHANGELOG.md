@@ -8,6 +8,7 @@
 -   **feat-** OGP設定
 -   **feat-** WebP出し分けのためのhtml修正とそれに伴うファイル名変更
 -   **feat-** css微調整
+-   **feat-** .htaccessのWebP出し分けの記述を削除
 
 
 ---
