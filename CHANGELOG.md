@@ -5,6 +5,7 @@
 ### 修正内容
 -   **docs-** CHANGELOG.mdとREADME.mdを追加しました。
 -   **feat-** meta情報の修正
+-   **feat-** OGP設定
 
 
 ---
