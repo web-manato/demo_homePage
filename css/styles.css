@@ -491,7 +491,7 @@ img {
   background: #111;
 }
 
-.el_btn:hover {
+.el_btn__white:hover {
   background: #111;
   color: #fff;
 }
