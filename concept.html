@@ -19,21 +19,25 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..700;1,400..700&family=Noto+Sans+JP:wght@400..700&display=swap" rel="stylesheet" media="print"
+        onload="this.media='all'">
 
     <!-- js -->
-    <script src="js/main.js" type="module"></script>
     <!-- GSAP -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="js/main.js" type="module"></script>
 
     <!-- ogp -->
-    <meta property="og:url" content="portfolio.web-manato.com/hp/hp2/page">
+    <meta property="og:url" content="https://portfolio.web-manato.com/demo/supple">
     <meta property="og:type" content="website">
     <meta property="og:title" content="ホームページデモ">
     <meta property="og:description" content="まなとが制作したホームページデモです。">
     <meta property="og:site_name" content="ホームページデモ">
-    <meta property="og:image" content="img/ogp.png">
+    <meta property="og:image" content="https://portfolio.web-manato.com/demo/supple/img/ogp.png">
+
+    <link rel="preload" as="image" href="img/sp_pageKv_bgImg_concept-2000px.png">
+    <link rel="preload" as="image" href="img/pc_pageKv_bgImg_concept-2500px.png">
 
 </head>
 
@@ -110,20 +114,12 @@
                 <!-- 画像 -->
                 <picture class="bl_concept_imgWrapper">
                     <!-- WebP -->
-                    <source media="(max-width: 400px)" srcset="img/sp_concept_img-1000px.webp" type="image/webp">
-                    <source media="(max-width: 500px)" srcset="img/sp_concept_img-1500px.webp" type="image/webp">
-                    <source media="(max-width: 768px)" srcset="img/sp_concept_img-2000px.webp" type="image/webp">
-                    <source media="(max-width: 1080px)" srcset="img/pc_concept_img-2500px.webp" type="image/webp">
-                    <source media="(max-width: 2000px)" srcset="img/pc_concept_img-3000px.webp" type="image/webp">
-                    <source srcset="img/pc_concept_img-3500px.webp" type="image/webp">
+                    <source media="(max-width: 1080px)" srcset="img/sp_concept_img-2000px.webp" type="image/webp">
+                    <source srcset="img/pc_concept_img-2500px.webp" type="image/webp">
 
                     <!-- 非対応時 -->
-                    <source media="(max-width: 400px)" srcset="img/sp_concept_img-1000px.png">
-                    <source media="(max-width: 500px)" srcset="img/sp_concept_img-1500px.png">
-                    <source media="(max-width: 768px)" srcset="img/sp_concept_img-2000px.png">
-                    <source media="(max-width: 1080px)" srcset="img/pc_concept_img-2500px.png">
-                    <source media="(max-width: 2000px)" srcset="img/pc_concept_img-3000px.png">
-                    <img src="img/pc_concept_img-3500px.png" alt="">
+                    <source media="(max-width: 1080px)" srcset="img/sp_concept_img-2000px.png">
+                    <img src="img/pc_concept_img-2500px.png" alt="" width="324" height="80">
                 </picture>
 
                 <!-- ボディ部分 -->
@@ -141,20 +137,12 @@
                 <!-- 画像 -->
                 <picture class="bl_concept_imgWrapper">
                     <!-- WebP -->
-                    <source media="(max-width: 400px)" srcset="img/sp_concept_img2-1000px.webp" type="image/webp">
-                    <source media="(max-width: 500px)" srcset="img/sp_concept_img2-1500px.webp" type="image/webp">
-                    <source media="(max-width: 768px)" srcset="img/sp_concept_img2-2000px.webp" type="image/webp">
-                    <source media="(max-width: 1080px)" srcset="img/pc_concept_img2-2500px.webp" type="image/webp">
-                    <source media="(max-width: 2000px)" srcset="img/pc_concept_img2-3000px.webp" type="image/webp">
-                    <source srcset="img/pc_concept_img2-3500px.webp" type="image/webp">
+                    <source media="(max-width: 1080px)" srcset="img/sp_concept_img2-2000px.webp" type="image/webp">
+                    <source srcset="img/pc_concept_img2-2500px.webp" type="image/webp">
 
                     <!-- 非対応時 -->
-                    <source media="(max-width: 400px)" srcset="img/sp_concept_img2-1000px.png">
-                    <source media="(max-width: 500px)" srcset="img/sp_concept_img2-1500px.png">
-                    <source media="(max-width: 768px)" srcset="img/sp_concept_img2-2000px.png">
-                    <source media="(max-width: 1080px)" srcset="img/pc_concept_img2-2500px.png">
-                    <source media="(max-width: 2000px)" srcset="img/pc_concept_img2-3000px.png">
-                    <img src="img/pc_concept_img2-3500px.png" alt="">
+                    <source media="(max-width: 1080px)" srcset="img/sp_concept_img2-2000px.png">
+                    <img src="img/pc_concept_img2-2500px.png" alt="" width="324" height="80">
                 </picture>
 
             </div>
@@ -172,105 +160,45 @@
             <div class="bl_instagram">
                 <picture class="bl_instagram_post">
                     <!-- WebP -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img-1000px.webp" type="image/webp">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img-1500px.webp" type="image/webp">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img-2000px.webp" type="image/webp">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img-2500px.webp" type="image/webp">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img-3000px.webp" type="image/webp">
-                    <source srcset="img/pc_instagram_img-3500px.webp" type="image/webp">
+                    <source srcset="img/sp_instagram_img-1500px.webp" type="image/webp">
 
                     <!-- 非対応時 -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img-1000px.png">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img-1500px.png">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img-2000px.png">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img-2500px.png">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img-3000px.png">
-                    <img src="img/pc_instagram_img-3500px.png" alt="投稿1">
+                    <img src="img/sp_instagram_img-1500px.png" alt="投稿1" width="114" height="114">
                 </picture>
                 <picture class="bl_instagram_post">
                     <!-- WebP -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img2-1000px.webp" type="image/webp">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img2-1500px.webp" type="image/webp">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img2-2000px.webp" type="image/webp">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img2-2500px.webp" type="image/webp">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img2-3000px.webp" type="image/webp">
-                    <source srcset="img/pc_instagram_img2-3500px.webp" type="image/webp">
+                    <source srcset="img/sp_instagram_img2-1500px.webp" type="image/webp">
 
                     <!-- 非対応時 -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img2-1000px.png">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img2-1500px.png">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img2-2000px.png">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img2-2500px.png">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img2-3000px.png">
-                    <img src="img/pc_instagram_img2-3500px.png" alt="投稿2">
+                    <img src="img/sp_instagram_img2-1500px.png" alt="投稿2" width="114" height="114">
                 </picture>
                 <picture class="bl_instagram_post">
                     <!-- WebP -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img3-1000px.webp" type="image/webp">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img3-1500px.webp" type="image/webp">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img3-2000px.webp" type="image/webp">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img3-2500px.webp" type="image/webp">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img3-3000px.webp" type="image/webp">
-                    <source srcset="img/pc_instagram_img3-3500px.webp" type="image/webp">
+                    <source srcset="img/sp_instagram_img3-1500px.webp" type="image/webp">
 
                     <!-- 非対応時 -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img3-1000px.png">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img3-1500px.png">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img3-2000px.png">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img3-2500px.png">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img3-3000px.png">
-                    <img src="img/pc_instagram_img3-3500px.png" alt="投稿3">
+                    <img src="img/sp_instagram_img3-1500px.png" alt="投稿3" width="114" height="114">
                 </picture>
                 <picture class="bl_instagram_post">
                     <!-- WebP -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img4-1000px.webp" type="image/webp">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img4-1500px.webp" type="image/webp">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img4-2000px.webp" type="image/webp">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img4-2500px.webp" type="image/webp">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img4-3000px.webp" type="image/webp">
-                    <source srcset="img/pc_instagram_img4-3500px.webp" type="image/webp">
+                    <source srcset="img/sp_instagram_img4-1500px.webp" type="image/webp">
 
                     <!-- 非対応時 -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img4-1000px.png">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img4-1500px.png">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img4-2000px.png">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img4-2500px.png">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img4-3000px.png">
-                    <img src="img/pc_instagram_img4-3500px.png" alt="投稿4">
+                    <img src="img/sp_instagram_img4-1500px.png" alt="投稿4" width="114" height="114">
                 </picture>
                 <picture class="bl_instagram_post">
                     <!-- WebP -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img5-1000px.webp" type="image/webp">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img5-1500px.webp" type="image/webp">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img5-2000px.webp" type="image/webp">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img5-2500px.webp" type="image/webp">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img5-3000px.webp" type="image/webp">
-                    <source srcset="img/pc_instagram_img5-3500px.webp" type="image/webp">
+                    <source srcset="img/sp_instagram_img5-1500px.webp" type="image/webp">
 
                     <!-- 非対応時 -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img5-1000px.png">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img5-1500px.png">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img5-2000px.png">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img5-2500px.png">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img5-3000px.png">
-                    <img src="img/pc_instagram_img5-3500px.png" alt="投稿5">
+                    <img src="img/sp_instagram_img5-1500px.png" alt="投稿5" width="114" height="114">
                 </picture>
                 <picture class="bl_instagram_post">
                     <!-- WebP -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img6-1000px.webp" type="image/webp">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img6-1500px.webp" type="image/webp">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img6-2000px.webp" type="image/webp">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img6-2500px.webp" type="image/webp">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img6-3000px.webp" type="image/webp">
-                    <source srcset="img/pc_instagram_img6-3500px.webp" type="image/webp">
+                    <source srcset="img/sp_instagram_img6-1500px.webp" type="image/webp">
 
                     <!-- 非対応時 -->
-                    <source media="(max-width: 400px)" srcset="img/sp_instagram_img6-1000px.png">
-                    <source media="(max-width: 500px)" srcset="img/sp_instagram_img6-1500px.png">
-                    <source media="(max-width: 768px)" srcset="img/sp_instagram_img6-2000px.png">
-                    <source media="(max-width: 1080px)" srcset="img/pc_instagram_img6-2500px.png">
-                    <source media="(max-width: 2000px)" srcset="img/pc_instagram_img6-3000px.png">
-                    <img src="img/pc_instagram_img6-3500px.png" alt="投稿6">
+                    <img src="img/sp_instagram_img6-1500px.png" alt="投稿6" width="114" height="114">
                 </picture>
             </div>
 

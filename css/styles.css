@@ -244,6 +244,7 @@ img {
 }
 .bl_imgWrapper img {
   width: 100%;
+  height: auto;
 }
 
 .un_lb__reverse {
@@ -302,7 +303,7 @@ img {
 
 @media screen and (min-width: 1080px) {
   .bl_contBg_menuImg {
-    background: url(../img/pc_top_menu_bgImg-3000px.png);
+    background: url(../img/pc_top_menu_bgImg-2500px.png);
   }
 }
 .bl_pageKv {
@@ -335,6 +336,7 @@ img {
 }
 .bl_secChange img {
   width: 100%;
+  height: auto;
 }
 
 .bl_post {
@@ -353,6 +355,7 @@ img {
 
 .bl_post_card_thumbnail img {
   width: 100%;
+  height: auto;
 }
 
 .bl_post_card_body {
@@ -402,6 +405,7 @@ img {
 
 .bl_instagram_post img {
   width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 1080px) {
@@ -529,7 +533,7 @@ img {
 
 @media screen and (min-width: 1080px) {
   .bl_kv {
-    background-image: url(../img/pc_top_kv_bgImg-3500px.png);
+    background-image: url(../img/pc_top_kv_bgImg-2500px.png);
   }
 }
 .bl_top_concept {
@@ -538,6 +542,7 @@ img {
 
 .bl_top_concept_imgWrapper img {
   width: 100%;
+  height: auto;
 }
 
 .bl_top_concept_body {
@@ -687,11 +692,12 @@ img {
 
 @media screen and (min-width: 1080px) {
   .bl_pageKv__concept {
-    background-image: url(../img/pc_pageKv_bgImg_concept-3500px.png);
+    background-image: url(../img/pc_pageKv_bgImg_concept-2500px.png);
   }
 }
 .bl_concept_imgWrapper img {
   width: 100%;
+  height: auto;
 }
 
 .bl_concept_imgWrapper:nth-of-type(2) {
@@ -735,7 +741,7 @@ img {
 
 @media screen and (min-width: 1080px) {
   .bl_pageKv__menu {
-    background-image: url(../img/pc_pageKv_bgImg_menu-3500px.png);
+    background-image: url(../img/pc_pageKv_bgImg_menu-2500px.png);
   }
 }
 .bl_menu_txtGroup {
@@ -767,6 +773,7 @@ img {
 }
 .bl_menu_listItem_imgWrapper img {
   width: 100%;
+  height: auto;
 }
 
 .bl_menu_listItem_txtGroup {
@@ -825,7 +832,7 @@ img {
 
 @media screen and (min-width: 1080px) {
   .bl_pageKv__blogNews {
-    background-image: url(../img/pc_pageKv_bgImg_shopList-3500px.png);
+    background-image: url(../img/pc_pageKv_bgImg_shopList-2500px.png);
   }
 }
 .bl_shopList_list {
@@ -847,6 +854,7 @@ img {
 }
 .bl_shopList_listItem_imgWrapper img {
   width: 100%;
+  height: auto;
 }
 
 .bl_shopList_listItem_txtGroup {
@@ -903,7 +911,7 @@ img {
 
 @media screen and (min-width: 1080px) {
   .bl_pageKv__blogNews {
-    background-image: url(../img/pc_pageKv_bgImg_blogNews-3500px.png);
+    background-image: url(../img/pc_pageKv_bgImg_blogNews-2500px.png);
   }
 }
 .bl_pagiNation_wrapper {
@@ -953,11 +961,12 @@ img {
 
 @media screen and (min-width: 1080px) {
   .bl_pageKv__shopList {
-    background-image: url(../img/pc_pageKv_bgImg_blogNews-3500px.png);
+    background-image: url(../img/pc_pageKv_bgImg_blogNews-2500px.png);
   }
 }
 .bl_post_imgWrapper img {
   width: 100%;
+  height: auto;
 }
 
 .bl_post_information_txtGroup {
@@ -1009,7 +1018,7 @@ img {
 
 @media screen and (min-width: 1080px) {
   .bl_pageKv__404 {
-    background-image: url(../img/pc_pageKv_bgImg_404-3500px.png);
+    background-image: url(../img/pc_pageKv_bgImg_404-2500px.png);
   }
 }
 .bl_404_txt {

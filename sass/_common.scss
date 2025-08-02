@@ -43,6 +43,7 @@ img{
 // 画像
 .bl_imgWrapper img{
     width: 100%;
+    height: auto;
 }
 
 // ユニークモジュール
@@ -105,7 +106,7 @@ img{
 }
 @include mixin.mq("pc"){
     .bl_contBg_menuImg{
-        background: url(../img/pc_top_menu_bgImg-3000px.png);
+        background: url(../img/pc_top_menu_bgImg-2500px.png);
     }
 }
 
@@ -143,6 +144,7 @@ img{
 
     img{
         width: 100%;
+        height: auto;
     }
 }
 
@@ -163,6 +165,7 @@ img{
 .bl_post_card_thumbnail{
     img{
         width: 100%;
+        height: auto;
     }
 }
 // ボディ
@@ -212,6 +215,7 @@ img{
 .bl_instagram_post{
     img{
         width: 100%;
+        height: auto;
     }
 }
 @include mixin.mq("pc"){

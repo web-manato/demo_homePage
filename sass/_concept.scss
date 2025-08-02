@@ -10,7 +10,7 @@
 }
 @include mixin.mq("pc"){
     .bl_pageKv__concept{
-        background-image: url(../img/pc_pageKv_bgImg_concept-3500px.png);
+        background-image: url(../img/pc_pageKv_bgImg_concept-2500px.png);
     }
 }
 
@@ -18,6 +18,7 @@
 .bl_concept_imgWrapper{
     img{
         width: 100%;
+        height: auto;
     }
 }
 .bl_concept_imgWrapper:nth-of-type(2){

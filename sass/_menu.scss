@@ -10,7 +10,7 @@
 }
 @include mixin.mq("pc"){
     .bl_pageKv__menu{
-        background-image: url(../img/pc_pageKv_bgImg_menu-3500px.png);
+        background-image: url(../img/pc_pageKv_bgImg_menu-2500px.png);
     }
 }
 
@@ -44,6 +44,7 @@
 .bl_menu_listItem_imgWrapper{
     img{
         width: 100%;
+        height: auto;
     }
 }
 // ボディ

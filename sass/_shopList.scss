@@ -10,7 +10,7 @@
 }
 @include mixin.mq("pc"){
     .bl_pageKv__blogNews{
-        background-image: url(../img/pc_pageKv_bgImg_shopList-3500px.png);
+        background-image: url(../img/pc_pageKv_bgImg_shopList-2500px.png);
     }
 }
 
@@ -35,6 +35,7 @@
 .bl_shopList_listItem_imgWrapper{
     img{
         width: 100%;
+        height: auto;
     }
 }
 // ボディ
